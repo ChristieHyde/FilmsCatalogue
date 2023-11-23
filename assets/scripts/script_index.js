@@ -1,6 +1,5 @@
-const DEBUG = true;
 const OMDB_API_KEY = "eae9958"; // Add after every OMDB request
-
+const DEBUG = true;
 
 var searchInput = document.getElementById("search-input");
 var lastSearched = localStorage.getItem(searchInput);
@@ -11,19 +10,11 @@ document.querySelector('form.search-form').addEventListener('submit', function (
     var text = searchInput.value;
     localStorage.setItem(searchInput, text);
     console.log(searchInput.value);
-})
-
-console.log(lastSearched);
-
-
-
-// API TESTS: Change DEBUG constant to true to run tests
-
-if (DEBUG) {
-    // OMDB API TEST
+    
+    // API TESTS: Change DEBUG constant to true to run tests
     console.log("OMDb API Test");
 
-    var testMovie = "barbie"
+    var testMovie = searchInput.value;
     var testRequest = "http://www.omdbapi.com/?t=" + testMovie + "&apikey=" + OMDB_API_KEY;
 
     fetch(testRequest)
@@ -38,4 +29,8 @@ if (DEBUG) {
                 console.log(data);
             }
         });
-}
+})
+
+console.log(lastSearched);
+
+
