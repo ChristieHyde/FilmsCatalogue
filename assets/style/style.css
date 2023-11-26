@@ -1,28 +1,19 @@
-html {
-    min-height: 100%;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-}
-
 body {
+    min-height: 50vh;
     margin: 0;
-    min-height: 100%;
-    background-color: #2d3e50 !important;
-}
-
-main {
-    display: block;
+    padding: 0;
 }
 
 header {
     height: 150px;
-    background-color: burlywood;
+    background-color: #97282c;
     text-align: center;
     padding-top: 30px;
+    color: #dda185;
 }
 
 h1 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 2.25rem;
     margin: 0 0 0.5 0rem;
     line-height: 1.25;
@@ -32,12 +23,6 @@ h1 {
 
 div {
     display: block;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
 }
 
 .align-content-stretch-md {
@@ -55,7 +40,8 @@ div {
   }
 
   .bg-primary {
-    background-color: #2d3e50 !important;
+    background-color: #428f89 !important;
+    background-image: url(../1111\ drien-olichon-3709369.jpg);
   }
 
   .min-100-vh {
@@ -66,10 +52,6 @@ div {
     flex: 0 0 25%;
     max-width: 25%;
   }
-
-  .bg-light {
-    background-color: #d9e9e8 !important;
-}
 
 .p-3 {
     padding: 1rem;
@@ -86,16 +68,13 @@ div {
     padding-left: 15px;
 }
 
-.text-primary {
-    color: #2d3e50;
-}
-
 .search-bar {
     flex: 0 0 25%;
-    background-color: aliceblue;
+    background-color: #428f89;
     display: block;
     margin: 0%;
     padding-bottom: 100%;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #97282c !important;
 }
 
 .container {
@@ -104,6 +83,7 @@ div {
 
 .search-bar h2 {
     text-align: center;
+    color: #dda185;
 }
 
 .search-bar form {
@@ -115,24 +95,35 @@ div {
 }
 
 .form-input {
-    width: 100%;
+    width: 90%;
     padding: 0.75rem;
     color: #1a1a1a;
-    background-color: #ffffff;
-    margin: 0.625rem 0;
+    margin: 0.625rem;
     font-size: 1.2rem;
     border: 1px solid #484848;
-    border-radius: 0.3rem;
+    border-radius: 20px;
 }
 
-.btn.btn-info {
-    background-color: #1bbc9b;
-    color: #ffffff;
-}
-
-.btn.btn-block {
-    width: 100%;
+.btn{
+    width: 90%;
     display: block;
     text-align: center;
     padding: 00.75rem;
+    margin: 00.625rem;
+    color: #dda185;
+    background-color: #97282c;
+    border-radius: 20px;
+    font-style: bold;
+    font-family: fantasy;
 }
+
+.search-header{
+    margin: 1rem;
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+} 
