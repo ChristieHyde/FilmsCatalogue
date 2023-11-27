@@ -6,7 +6,7 @@ var lastSearched = localStorage.getItem(searchInput);
 var movieTitle = document.getElementById('result-content');
 var repoEl = document.createElement('div');
 var titleEl = document.createElement('button');
-var movieFound = 'movieFound'
+var movieFound = 'movieFound';
 localStorage.getItem(titleEl);
 console.log(movieFound);
 
@@ -41,7 +41,7 @@ document.querySelector('form.search-form').addEventListener('submit', function (
                 console.log("Test complete! Request results:");
                 console.log(data);
                 console.log(data.Title);
-                var titleName = data.Title + ' | ' + data.Rated + ' | ' + data.Runtime;
+                var titleName = 'Title: ' + data.Title + ' | Rating: ' + data.Rated + ' | Time: ' + data.Runtime  + ' | Year Of Release: ' + data.Year;
                 repoEl.setAttribute('style', 'flex: 0 0 75%')
 
                 titleEl.textContent = titleName;
