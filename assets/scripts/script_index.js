@@ -6,7 +6,8 @@ var lastSearched = localStorage.getItem(searchInput);
 var movieTitle = document.getElementById('result-content');
 var repoEl = document.createElement('div');
 var titleEl = document.createElement('button');
-var movieFound = localStorage.getItem(titleEl);
+var movieFound = 'movieFound'
+localStorage.getItem(titleEl);
 console.log(movieFound);
 
 document.querySelector('form.search-form').addEventListener('submit', function (e) {
@@ -50,13 +51,13 @@ document.querySelector('form.search-form').addEventListener('submit', function (
 
                 repoEl.appendChild(titleEl);
                 movieTitle.appendChild(repoEl);
-                localStorage.setItem(titleEl, titleMovie);
+                localStorage.setItem(movieFound, titleMovie);
             }
         });
     } 
 })
 
-movieTitle.onclick = function () {
+titleEl.onclick = function () {
     location.replace('details.html');
 }
 
