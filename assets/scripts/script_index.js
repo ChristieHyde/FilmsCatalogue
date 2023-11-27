@@ -5,9 +5,9 @@ var searchInput = document.getElementById("search-input");
 var lastSearched = localStorage.getItem(searchInput);
 var movieTitle = document.getElementById('result-content');
 var repoEl = document.createElement('div');
-var titleEl = document.createElement('button');
+var titleEl = document.createElement('p');
 var movieFound = 'movieFound';
-localStorage.getItem(titleEl);
+localStorage.getItem(movieFound);
 console.log(movieFound);
 
 document.querySelector('form.search-form').addEventListener('submit', function (e) {
@@ -42,11 +42,10 @@ document.querySelector('form.search-form').addEventListener('submit', function (
                 console.log(data);
                 console.log(data.Title);
                 var titleName = 'Title: ' + data.Title + ' | Rating: ' + data.Rated + ' | Time: ' + data.Runtime  + ' | Year Of Release: ' + data.Year;
-                repoEl.setAttribute('style', 'flex: 0 0 75%')
+                repoEl.setAttribute('style', 'flex: 0 0 75%');
 
                 titleEl.textContent = titleName;
-                titleEl.setAttribute('style', 'font-size: 20px; margin-left: 5%; border: 2px solid');
-                titleEl.setAttribute('class', 'more-info');
+                titleEl.setAttribute('style', 'font-size: 20px; margin-left: 5%; border: 2px solid; background-color: grey');
                 var titleMovie = data.Title;
 
                 repoEl.appendChild(titleEl);

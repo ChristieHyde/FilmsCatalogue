@@ -136,3 +136,9 @@ div {
     text-align: center;
     padding: 00.75rem;
 }
+
+.result-container {
+    display: flex;
+}
+
+
