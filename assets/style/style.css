@@ -126,6 +126,11 @@ div {
     box-shadow: 5px 5px 15px #3b393a
 }
 
+.result-container {
+    display: flex;
+}
+
+
 .search-header{
     margin: 2rem;
     color:#97282c;
