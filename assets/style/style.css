@@ -9,15 +9,13 @@ header {
     background-color: #97282c;
     text-align: center;
     padding-top: 30px;
-    color: #dda185;
 }
 
 h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Garamond , Arial, Helvetica, sans-serif;
     font-size: 2.25rem;
     margin: 0 0 0.5 0rem;
     line-height: 1.25;
-    font-weight: 700;
     padding-top: none
 }
 
@@ -41,7 +39,17 @@ div {
 
   .bg-primary {
     background-color: #428f89 !important;
-    background-image: url(../1111\ drien-olichon-3709369.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .main-bgimg {
+      background-image: url(../background-img/Movie\ 1\)\ 37.jpg);
+  }
+
+  .result-bgimg{
+      background-image: url(../background-img/movie\ 2\)\ 5.jpg);
   }
 
   .min-100-vh {
@@ -52,10 +60,6 @@ div {
     flex: 0 0 25%;
     max-width: 25%;
   }
-
-.p-3 {
-    padding: 1rem;
-}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -73,8 +77,8 @@ div {
     background-color: #428f89;
     display: block;
     margin: 0%;
-    padding-bottom: 100%;
-    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #97282c !important;
+    padding-bottom: 66%;
+    box-shadow: 0.65rem 0.65rem 0.65rem 0.65rem #3b393a
 }
 
 .container {
@@ -83,7 +87,9 @@ div {
 
 .search-bar h2 {
     text-align: center;
-    color: #dda185;
+    color: #484848;
+    font-family: Garamond;
+    font-size: 1cm;
 }
 
 .search-bar form {
@@ -102,6 +108,7 @@ div {
     font-size: 1.2rem;
     border: 1px solid #484848;
     border-radius: 20px;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #3b393a
 }
 
 .btn{
@@ -110,15 +117,19 @@ div {
     text-align: center;
     padding: 00.75rem;
     margin: 00.625rem;
-    color: #dda185;
     background-color: #97282c;
     border-radius: 20px;
     font-style: bold;
-    font-family: fantasy;
+    font-family: garamond;
+    font-size: 0.8cm;
+    box-shadow: 0.25rem 0.25rem 0.25rem 0.25rem #3b393a
 }
 
 .search-header{
-    margin: 1rem;
+    margin: 2rem;
+    font-family: Garamond;
+    color:#97282c;
+    font-size: 1cm;
 }
 
 @media screen and (max-width:768px) {
