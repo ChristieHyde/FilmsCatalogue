@@ -1,3 +1,11 @@
+* {
+    font-family: Garamond , Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
     min-height: 50vh;
     margin: 0;
@@ -5,14 +13,13 @@ body {
 }
 
 header {
-    height: 150px;
+    height: 100px;
     background-color: #97282c;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 5px;
 }
 
 h1 {
-    font-family: Garamond , Arial, Helvetica, sans-serif;
     font-size: 2.25rem;
     margin: 0 0 0.5 0rem;
     line-height: 1.25;
@@ -61,10 +68,6 @@ div {
     max-width: 25%;
   }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 [class*='col-'] {
     position: relative;
     width: 100%;
@@ -88,8 +91,7 @@ div {
 .search-bar h2 {
     text-align: center;
     color: #484848;
-    font-family: Garamond;
-    font-size: 1cm;
+    font-size: 0.8cm;
 }
 
 .search-bar form {
@@ -104,7 +106,7 @@ div {
     width: 90%;
     padding: 0.75rem;
     color: #1a1a1a;
-    margin: 0.625rem;
+    margin: 0.625rem 5%;
     font-size: 1.2rem;
     border: 1px solid #484848;
     border-radius: 20px;
@@ -112,22 +114,20 @@ div {
 }
 
 .btn{
-    width: 90%;
+    width: 60%;
     display: block;
     text-align: center;
     padding: 00.75rem;
-    margin: 00.625rem;
+    margin: 00.625rem 20%;
     background-color: #97282c;
     border-radius: 20px;
     font-style: bold;
-    font-family: garamond;
-    font-size: 0.8cm;
+    font-size: 1.2rem;
     box-shadow: 5px 5px 15px #3b393a
 }
 
 .search-header{
     margin: 2rem;
-    font-family: Garamond;
     color:#97282c;
     font-size: 1cm;
 }
