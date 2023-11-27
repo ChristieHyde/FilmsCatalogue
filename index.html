@@ -5,25 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Films Catalogue</title>
-  <link rel="stylesheet" href="./assets/style/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap">
+  <link rel="stylesheet" href="./assets/style/style.css"/>
 </head>
 
 <body>
-<Header>
-  <h1>Films Catalogue</h1>
-</Header>
-  <div>
+
+  <header>
+    <h1>Films Catalogue</h1>
+  </header>
+  
+  <div class="container">
     <div class="search-bar">
-      <h1>Search your movie here!</h1>
+      <h2>Search your movie here</h2>
       <form id="searcher" class="search-form">
-        <input id="search-input" class="form-input" type="text" placeholder="Search!" name="searched" autocomplete="on">
-        
+        <input id="search-input" class="form-input" type="text" placeholder="Search!"  name="searched" autocomplete="on">        
         <button class="btn" type="submit">Search</button>
       </form>
     </div>
 
     <div>
-      <h2>Showing results for <span id="result-text"></span></h2>
+      <h2>Search Result</h2>
      
       <div id="result-content"></div>
     </div>

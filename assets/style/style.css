@@ -1,10 +1,13 @@
-html{
+html {
+    min-height: 100%;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
 }
 
 body {
     margin: 0;
+    min-height: 100%;
+    background-color: #2d3e50 !important;
 }
 
 main {
@@ -12,20 +15,124 @@ main {
 }
 
 header {
-    height: 50px;
+    height: 150px;
     background-color: burlywood;
-    border: darkblue;
-    border: 5px;
     text-align: center;
-    font-display: absolute;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-family: 'Merriweather', serif;
+    font-size: 2.25rem;
+    margin: 0 0 0.5 0rem;
+    line-height: 1.25;
+    font-weight: 700;
+    padding-top: none
+}
+
+div {
+    display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 .align-content-stretch-md {
-    align-content: stretch
+    align-content: stretch;
+  }
+
+  .align-stretch-md {
+    align-items: stretch;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .bg-primary {
+    background-color: #2d3e50 !important;
+  }
+
+  .min-100-vh {
+    min-height: 100vh;
+  }
+
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .bg-light {
+    background-color: #d9e9e8 !important;
+}
+
+.p-3 {
+    padding: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+[class*='col-'] {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.text-primary {
+    color: #2d3e50;
+}
+
+.search-bar {
+    flex: 0 0 25%;
+    background-color: aliceblue;
+    display: block;
+    margin: 0%;
+    padding-bottom: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+.search-bar h2 {
+    text-align: center;
+}
+
+.search-bar form {
+    justify-content: center;
+    width: 100%;
+}
+.mb-2 {
+    align-content: center;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    margin: 0.625rem 0;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+}
+
+.btn.btn-info {
+    background-color: #1bbc9b;
+    color: #ffffff;
+}
+
+.btn.btn-block {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 00.75rem;
 }
