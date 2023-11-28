@@ -28,7 +28,7 @@ document.querySelector('form.search-form').addEventListener('submit', function (
     console.log("OMDb API Test");
 
     var testMovie = searchInput.value;
-    var testRequest = "http://www.omdbapi.com/?t=" + testMovie + "&apikey=" + OMDB_API_KEY;
+    var testRequest = "https://www.omdbapi.com/?t=" + testMovie + "&apikey=" + OMDB_API_KEY;
 
     fetch(testRequest)
         .then(function (response) {
