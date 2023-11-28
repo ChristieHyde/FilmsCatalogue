@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Result Page</title>
+  <title>Films Catalogue</title>
   <link rel="stylesheet" href="./assets/style/style.css" />
 </head>
 
@@ -24,10 +24,17 @@
       </div>
   
       <div>
-        <h2 class="search-header">Search Result</h2>
+        <h2 id="title-div"></h2>
+        <div class="details-container">
+          <img id="poster-img" alt="Poster"/>
+          <div id="movie-text-div">
+            <p id="plot"></p>
+            <ul id="movie-properties"></ul>
+          </div>
+        </div>
       </div>
     </div>
-  
+    <script src="./assets/scripts/script_details.js"></script>
   </body>
   
   </html>

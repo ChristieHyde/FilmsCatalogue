@@ -130,6 +130,17 @@ div {
     display: flex;
 }
 
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid;
+    background-color: grey;
+}
+
+#poster-img {
+    margin-right: 10px;
+}
 
 .search-header{
     margin: 2rem;
