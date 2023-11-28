@@ -21,7 +21,7 @@ function init() {
     //localStorage.removeItem("movieFound");
 
     // Make another API call to get the detailed information
-    var apiRequest = "http://www.omdbapi.com/?t=" + movieTitle + "&apikey=" + OMDB_API_KEY;
+    var apiRequest = "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=" + OMDB_API_KEY;
     console.log(movieTitle);
 
     fetch(apiRequest)
