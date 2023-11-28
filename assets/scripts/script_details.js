@@ -5,12 +5,6 @@ var plotEl = document.getElementById('plot');
 var propertiesListEl = document.getElementById('movie-properties');
 var backBtn = document.querySelector(".btn");
 
-// Data points to include on the details page
-var movieTitle, movieReleaseYear, movieReleaseDate, movieRuntime, 
-    movieContentRating,movieCriticRatings, movieActors, movieDirector, 
-    moviePlotSummary, moviePosterURL;
-
-console.log("hi");
 init();
 
 // Back button
@@ -24,11 +18,10 @@ function init() {
     if (!movieTitle) {
         return;
     }
-    //localStorage.removeItem("movieFound");
+    localStorage.removeItem("movieFound");
 
     // Make another API call to get the detailed information
     var apiRequest = "https://www.omdbapi.com/?t=" + movieTitle + "&apikey=" + OMDB_API_KEY;
-    console.log(movieTitle);
 
     fetch(apiRequest)
         .then(function (response) {
