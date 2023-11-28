@@ -3,6 +3,7 @@ var titleDivEl = document.getElementById('title-div');
 var posterEl = document.getElementById('poster-img');
 var plotEl = document.getElementById('plot');
 var propertiesListEl = document.getElementById('movie-properties');
+var backBtn = document.querySelector(".btn");
 
 // Data points to include on the details page
 var movieTitle, movieReleaseYear, movieReleaseDate, movieRuntime, 
@@ -11,6 +12,11 @@ var movieTitle, movieReleaseYear, movieReleaseDate, movieRuntime,
 
 console.log("hi");
 init();
+
+// Back button
+backBtn.addEventListener('click', function() {
+    location.replace('index.html');
+})
 
 function init() {
     // Get the searched movie from local storage
