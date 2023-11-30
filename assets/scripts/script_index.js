@@ -1,5 +1,5 @@
+const DEBUG = false;
 const OMDB_API_KEY = "eae9958"; // Add after every OMDB request
-
 
 var searchInput = document.getElementById("search-input");
 var lastSearched = localStorage.getItem(searchInput);
@@ -7,13 +7,11 @@ var movieTitle = document.getElementById('result-content');
 var repoEl = document.createElement('div');
 var titleEl = document.createElement('p');
 var movieFound = 'movieFound';
-localStorage.getItem(movieFound);
-console.log(movieFound);
 
 document.querySelector('form.search-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    movieTitle.textContent = 'Search Result '
+    // Get the input from the search bar
     var text = searchInput.value;
 
     if (searchInput.value === '') {
@@ -21,13 +19,40 @@ document.querySelector('form.search-form').addEventListener('submit', function (
     }
     else {
     localStorage.setItem(searchInput, text);
-    console.log(searchInput.value);
-    movieTitle.textContent = movieTitle.textContent + '"' + searchInput.value + '"';
+    movieTitle.textContent = 'Search Results for "' + searchInput.value + '"';
     
-    // API TESTS: Change DEBUG constant to true to run tests
+    // Make the API call
+    var searchMovie = searchInput.value;
+    var apiRequest = "https://www.omdbapi.com/?t=" + searchMovie + "&apikey=" + OMDB_API_KEY;
+
+    fetch(apiRequest)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            // Build the results card
+            var titleName = 'Title: ' + data.Title + ' | Rating: ' + data.Rated + ' | Time: ' + data.Runtime  + ' | Year Of Release: ' + data.Year;
+            repoEl.setAttribute('style', 'flex: 0 0 75%');
+            
+            titleEl.textContent = titleName;
+            titleEl.setAttribute('class', 'result-card');
+
+            // Add event listener to the results card
+            repoEl.onclick = function () {
+                localStorage.setItem(movieFound, data.Title);
+                location.replace('details.html');
+            }
+            repoEl.appendChild(titleEl);
+            movieTitle.appendChild(repoEl);            
+        });
+    } 
+})
+
+// API TESTS: Change DEBUG constant to true to run tests
+if (DEBUG) {
     console.log("OMDb API Test");
 
-    var testMovie = searchInput.value;
+    var testMovie = "harry potter";
     var testRequest = "https://www.omdbapi.com/?t=" + testMovie + "&apikey=" + OMDB_API_KEY;
 
     fetch(testRequest)
@@ -40,27 +65,6 @@ document.querySelector('form.search-form').addEventListener('submit', function (
             } else {
                 console.log("Test complete! Request results:");
                 console.log(data);
-                console.log(data.Title);
-                var titleName = 'Title: ' + data.Title + ' | Rating: ' + data.Rated + ' | Time: ' + data.Runtime  + ' | Year Of Release: ' + data.Year;
-                repoEl.setAttribute('style', 'flex: 0 0 75%');
-
-                titleEl.textContent = titleName;
-                titleEl.setAttribute('style', 'font-size: 20px; margin-left: 5%; border: 2px solid; background-color: grey');
-                var titleMovie = data.Title;
-
-                repoEl.appendChild(titleEl);
-                movieTitle.appendChild(repoEl);
-                localStorage.setItem(movieFound, titleMovie);
             }
         });
-    } 
-})
-
-titleEl.onclick = function () {
-    location.replace('details.html');
 }
-
-
-console.log(lastSearched);
-
-

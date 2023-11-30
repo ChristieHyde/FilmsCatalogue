@@ -1,9 +1,21 @@
+/* Universal styles and variables */
 * {
     font-family: Garamond , Arial, Helvetica, sans-serif;
+    --bg-color: #428f89;
+    --fg-color: #97282c;
+    --shade-color: #3b393a;
+    --card-color: grey;
+    --text-color: #1a1a1a;
+    --accent-color: #484848;
 }
 
 *, *::before, *::after {
     box-sizing: border-box;
+}
+
+/* Styles for alignment and main sections */
+div {
+    display: block;
 }
 
 body {
@@ -12,9 +24,10 @@ body {
     padding: 0;
 }
 
+/* Styles for the header */
 header {
     height: 100px;
-    background-color: #97282c;
+    background-color: var(--fg-color);
     text-align: center;
     padding-top: 5px;
 }
@@ -26,10 +39,80 @@ h1 {
     padding-top: none
 }
 
-div {
+/* Styles for the search sidebar */
+.search-bar {
+    flex: 0 0 25%;
+    background-color: var(--bg-color);
     display: block;
+    margin-right: 2%;
+    padding-bottom: 66%;
+    box-shadow: 0px 5px 15px var(--shade-color)
 }
 
+.sidebar-container {
+    display: flex;
+}
+
+.search-bar h2 {
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 0.8cm;
+}
+
+.search-bar form {
+    justify-content: center;
+    width: 100%;
+}
+
+.form-input {
+    width: 90%;
+    padding: 0.75rem;
+    color: var(--text-color);
+    margin: 0.625rem 5%;
+    font-size: 1.2rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    box-shadow: 2px 2px 15px var(--shade-color)
+}
+
+.btn{
+    width: 60%;
+    display: block;
+    text-align: center;
+    padding: 00.75rem;
+    margin: 00.625rem 20%;
+    background-color: var(--fg-color);
+    border-radius: 20px;
+    font-style: bold;
+    font-size: 1.2rem;
+    box-shadow: 5px 5px 15px var(--shade-color)
+}
+
+/* Styles for the results and detail cards */
+.result-container {
+    display: flex;
+}
+
+.result-card {
+    font-size: 20px;
+    margin-left: 5%;
+    border: 2px solid;
+    background-color: var(--card-color);
+}
+
+.details-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px solid;
+    background-color: var(--card-color);
+}
+
+#poster-img {
+    margin-right: 10px;
+}
+
+/* Alignment and semantic element styles */
 .align-content-stretch-md {
     align-content: stretch;
   }
@@ -45,7 +128,7 @@ div {
   }
 
   .bg-primary {
-    background-color: #428f89 !important;
+    background-color: var(--bg-color) !important;
     background-size: cover;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -75,77 +158,8 @@ div {
     padding-left: 15px;
 }
 
-.search-bar {
-    flex: 0 0 25%;
-    background-color: #428f89;
-    display: block;
-    margin-right: 2%;
-    padding-bottom: 66%;
-    box-shadow: 0px 5px 15px #3b393a
-}
-
-.container {
-    display: flex;
-}
-
-.search-bar h2 {
-    text-align: center;
-    color: #484848;
-    font-size: 0.8cm;
-}
-
-.search-bar form {
-    justify-content: center;
-    width: 100%;
-}
 .mb-2 {
     align-content: center;
-}
-
-.form-input {
-    width: 90%;
-    padding: 0.75rem;
-    color: #1a1a1a;
-    margin: 0.625rem 5%;
-    font-size: 1.2rem;
-    border: 1px solid #484848;
-    border-radius: 20px;
-    box-shadow: 2px 2px 15px #3b393a
-}
-
-.btn{
-    width: 60%;
-    display: block;
-    text-align: center;
-    padding: 00.75rem;
-    margin: 00.625rem 20%;
-    background-color: #97282c;
-    border-radius: 20px;
-    font-style: bold;
-    font-size: 1.2rem;
-    box-shadow: 5px 5px 15px #3b393a
-}
-
-.result-container {
-    display: flex;
-}
-
-.details-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border: 2px solid;
-    background-color: grey;
-}
-
-#poster-img {
-    margin-right: 10px;
-}
-
-.search-header{
-    margin: 2rem;
-    color:#97282c;
-    font-size: 1cm;
 }
 
 @media screen and (max-width:768px) {
